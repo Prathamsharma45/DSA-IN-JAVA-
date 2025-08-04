@@ -45,11 +45,12 @@ class Built {
         postorder(root.right);
         System.out.print(root.data + " ");
     }
+    
 }
 
 public class index {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 4, -1, -1, -1, 3, -1, -1};
+        int[] arr = {1,2,4,-1,-1,-1,3,-1,-1};
         Node root = Built.buildNewNode(arr);
 
         System.out.print("Preorder: ");

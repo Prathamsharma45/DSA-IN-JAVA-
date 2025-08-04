@@ -8,7 +8,7 @@ class Node{
         this.right=null;
 
      }
-  class Built {
+  static class Build {
     static int id = -1;
 
     public static Node buildNewNode(int[] arr) {
@@ -22,19 +22,19 @@ class Node{
         return newNode;
     }
     
-     static void preorder(Node root){
+     public static void preorder(Node root){
         if(root==null)return;
        System.out.println(root.data+" ");
        preorder(root.left);
        preorder(root.right) ; 
     }
-    static void postorder(Node root){
+    public static void postorder(Node root){
            if(root==null)return;
            postorder(root.left);
            postorder(root.right);
            System.out.println(root.data+" ");
     }
-    static void inorder(Node root){
+    public static void inorder(Node root){
         if(root==null)return ;
         inorder(root.left);
         System.out.println(root.data+" ");
@@ -46,14 +46,18 @@ class Node{
 }
 class treepractice1{
    public static void main(String[] args) {
-        int[] arr = {1, 2, 4, -1, -1, -1, 3, -1, -1};
-        Node root = Built.buildNewNode(arr);
-
-        System.out.print("Preorder: ");
-        Built.preorder(root);
+       int[] node = {1,2,4,-1,-1,-1,3,-1,-1};
+        Node.Build list = new Node.Build();
+        Node temp = Node.Build.buildNewNode(node);
+        System.out.println("preorder");
+        Node.Build.preorder(temp);
+        System.out.println();
         System.out.println("postorder");
+        Node.Build.postorder(temp);
+        System.out.println();
+        System.out.println("inorder");
+        Node.Build.inorder(temp);
 
-        Built.postorder(root);
     
     }
 
