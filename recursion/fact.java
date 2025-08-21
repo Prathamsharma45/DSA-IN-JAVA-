@@ -7,6 +7,6 @@ public class fact {
     }
     public static void main(String[] args) {
        
-        System.out.println("fact "+ fact(8));
+        System.out.println("fact "+ fact(5));
     }
 }
