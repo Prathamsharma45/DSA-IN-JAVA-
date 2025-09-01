@@ -14,7 +14,7 @@ class pathmaze{
         if(row<maze.length-1){
            pathrestriction(p+"D",maze ,row+1, col);
         }
-        if(col<maze[0].length-1){
+        if(col<maze[0].length-1){ 
          pathrestriction(p+"R",maze, row, col+1);
         }
     }
